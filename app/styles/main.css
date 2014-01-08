@@ -20,3 +20,32 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
+
+#map {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ur-here {
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ur-here * {
+    display: inline-block;
+  }
+
+.ur-here .text {
+    vertical-align: top;
+    line-height: 20px;
+    font-size: 1.6em;
+}
+
+.ur-here .marker {
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    border-radius: 1000px;
+}
