@@ -1,0 +1,31 @@
+#map {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+$marker-size: 20px;
+$marker-color: grey;
+
+.ur-here {
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  * {
+    display: inline-block;
+  }
+
+  .text {
+    vertical-align: top;
+    line-height: $marker-size;
+    font-size: 1.6em;
+  }
+
+  .marker {
+    height: $marker-size;
+    width: $marker-size;
+    background-color: $marker-color;
+    border-radius: 1000px;
+  }
+}
