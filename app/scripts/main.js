@@ -15,7 +15,9 @@ require(['app', 'jquery'], function (app, $) {
     // use app here
     console.log(app);
 
-    var imgName = (window.location.search ? window.location.search.replace("?", "") : "feup") + ".png";
+
+
+    var imgName = (window.location.search ? window.location.search.replace('?', '') : 'feup') + '.png';
 
     $('#map').error(function() {
         var troll = [
@@ -46,15 +48,18 @@ require(['app', 'jquery'], function (app, $) {
             'marcoooo! poloooo!',
             'wait wait! WHERE ARE YOU GOING!',
             'return whereYouWannaGo;',
-            '(°□º)'
+            '(°□º)',
+            'GET OUT OF THERE! ITS GONNA BLOW',
+            'FIRE IN THE HOLE',
+            'BEEP...BEEP...BEEP...'
         ]
 
         troll = troll[Math.floor(Math.random() * troll.length)];
 
-        $(this).attr('src', "http://placehold.it/1024x480&text=" + troll)
+        $(this).attr('src', 'http://placehold.it/1024x480&text=' + troll)
     })
 
     
-    .attr('src', "images/" + imgName);
+    .attr('src', 'images/' + imgName);
 
 });

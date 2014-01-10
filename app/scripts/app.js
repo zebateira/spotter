@@ -2,5 +2,7 @@
 define([], function () {
     'use strict';
 
+
+
     return 'Spotter';
 });
