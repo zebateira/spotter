@@ -2,108 +2,89 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <link rel="icon" 
-          type="image/png" 
-          href="favicon.png" />
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/app.css">
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Spotter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" 
+      type="image/png" 
+      href="favicon.png" />
 
-        <!-- build:css styles/vendor/foundation/stylesheets/foundation-min.css -->
-        <link rel="stylesheet" href="styles/vendor/foundation/stylesheets/foundation-min.css">
-        <!-- endbuild -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/app.css">
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
 </head>
-    <body>
-        <!DOCTYPE html>
 
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-
-  <!-- Set the viewport width to device width for mobile -->
-  <meta name="viewport" content="width=device-width">
-
-  <title>Spotter</title>
-
-  <!-- Included CSS Files (Uncompressed) -->
-  <!--
-  <link rel="stylesheet" href="stylesheets/foundation.css">
-  -->
-
-  <!-- Included CSS Files (Compressed) -->
-  <link rel="stylesheet" href="stylesheets/foundation.min.css">
-  <link rel="stylesheet" href="stylesheets/app.css">
-
-  <script src="javascripts/modernizr.foundation.js"></script>
-
-        <!-- build:css styles/vendor/foundation/stylesheets/foundation-min.css -->
-        <link rel="stylesheet" href="styles/vendor/foundation/stylesheets/foundation-min.css">
-        <!-- endbuild -->
-</head>
 <body>
 
-  <!-- Nav and Banner -->
-
-  <div class="row">
-    <div class="twelve columns">
-      <ul class="nav-bar">
-        <li><a href="">Spotter</a></li>
-        <li><a href="">FEUP</a></li>
-      </ul>
-
-      <!-- Main Banner Image - place in a paragraph to enforce the modular scale spacing -->
-
-      <p><img id="map" src=""></p>
+  <!-- <input type="file" accept="image/*" capture="camera"> -->
 
 
-      <!-- <input type="file" accept="image/*" capture="camera"> -->
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
+      <nav class="tab-bar">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+
+        <section class="middle tab-bar-section">
+          <h1 class="title">Spotter</h1>
+        </section>
+<!--
+        <section class="right-small">
+          <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+      -->
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Spotter</label></li>
+          <li><a href="#">FEUP's Map</a></li>
+          <li><a href="#">Where am I</a></li>
+          <li><a href="#">History</a></li>
+          <li><label>About</label></li>
+          <li><a>What is Spotter</a></li>
+          <li><a>Help</a></li>
+          <li><a>&copy; José Bateira 2014</a></li>
+        </ul>
+
+
+      </aside>
+<!--
+      <aside class="right-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Users</label></li>
+          <li><a href="#">Hari Seldon</a></li>
+          ...
+        </ul>
+      </aside>
+-->
+      <section class="main-section">
+        <div class="panel">
+          <img id="map" src="">
+        </div>
+        <div class="ur-here">
+          <div class="marker"></div>
+          <div class="text">← You are here!</div>
+        </div>
+      </section>
+
+
+      <!-- Footer -->
+
+
+      <a class="exit-off-canvas"></a>
+
     </div>
   </div>
 
-  <!-- End Nav and Banner -->
 
-
-  <!-- Main Content Section -->
-
-  <section class="row">
-
-    
-      <div class="ur-here">
-        <div class="marker"></div>
-
-        <div class="text">← You are here!</div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Footer -->
-
-  <footer class="row">
-    <div class="twelve columns">
-      <hr>
-      <div class="row">
-        <div class="six columns">
-          <p>&copy; José Bateira</p>
-        </div>
-      </div>
-    </div>
-  </footer>
 
   <!-- Included JS Files (Uncompressed) -->
   <!--
@@ -146,56 +127,24 @@
 
   -->
 
-  <!-- Included JS Files (Compressed) -->
-  <!-- 
-  <script src="javascripts/jquery.js"></script>
-  <script src="javascripts/foundation.min.js"></script>
- -->
-  <!-- Initialize JS Plugins -->
-  <script src="javascripts/app.js"></script>
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
 
-        <!-- build:js scripts/main.js -->
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-        <!-- endbuild -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <!-- build:js scripts/fullscreensnippet.js -->
-        <script src="scripts/fullscreensnippet.js"></script>
-        <!-- endbuild -->
+    ga('create', 'UA-45298018-4', 'carsy.github.io');
+    ga('send', 'pageview');
 
-        <!-- build:js scripts/fastclick.js -->
-        <script src="scripts/fastclick.js"></script>
-        <script src="scripts/fastclick.example.js"></script>
-        <!-- endbuild -->
-</body>
-</html>
+  </script>
 
+  <!-- build:js scripts/main.js -->
+  <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+  <!-- endbuild -->
 
-        <!--[if lt IE 7]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]-->
-
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-45298018-4', 'carsy.github.io');
-          ga('send', 'pageview');
-
-        </script>
-
-        <!-- build:js scripts/main.js -->
-        <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/fullscreensnippet.js -->
-        <script src="scripts/fullscreensnippet.js"></script>
-        <!-- endbuild -->
-
-        <!-- build:js scripts/fastclick.js -->
-        <script src="scripts/fastclick.js"></script>
-        <script src="scripts/fastclick.example.js"></script>
-        <!-- endbuild -->
 </body>
 </html>

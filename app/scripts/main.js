@@ -1,6 +1,7 @@
 require.config({
     paths: {
-        jquery: '../bower_components/jquery/jquery'
+        jquery: '../bower_components/jquery/jquery',
+        modernizr: 'bower_components/modernizr/modernizr'
     },
     shim: {
         bootstrap: {
@@ -10,12 +11,10 @@ require.config({
     }
 });
 
-require(['app', 'jquery'], function (app, $) {
+require(['app', 'jquery', 'foundation-amd'], function (app, $) {
     'use strict';
     // use app here
     console.log(app);
-
-
 
     var imgName = (window.location.search ? window.location.search.replace('?', '') : 'feup') + '.png';
 
