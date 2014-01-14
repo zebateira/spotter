@@ -8,19 +8,11 @@ html, body {
   height: 100%;
 }
 
-#map {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 $marker-size: 20px;
 $marker-color: grey;
 
 .ur-here {
-  width: 200px;
-  margin-right: auto;
-  margin-left: auto;
+  text-align: center;
 
   * {
     display: inline-block;
