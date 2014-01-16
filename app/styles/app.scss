@@ -12,12 +12,9 @@ $marker-size: 20px;
 $marker-color: grey;
 
 #map {
-  @media #{$landscape} {
-    height: 100%;
-  }
-  @media #{$portrait} {
-    width: 100%;
-  }
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .ur-here {
