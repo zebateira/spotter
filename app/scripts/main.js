@@ -20,14 +20,13 @@ require(['app', 'jquery', 'svgjs', 'foundation-amd'], function (app, $, SVG) {
 
     if(SVG.supported) {
 
-        var draw = SVG('map').size('100%', $(document).height() * 0.5);
-        var rect = draw.image('images/' + imgName, '100%', '100%');
+        var draw = SVG('map').size('100%', '100%');
+        var rect = draw.image('images/' + imgName, '100%', $(document).height() - $('.tab-bar').height() - 40);
 
         $(window).on('resize', function() {
-            draw.size('100%', $(document).height() * 0.6)
-            rect.size('100%', '100%');
-            console.log(rect);
+            rect.size('100%', $(document).height() - $('.tab-bar').height() - 40);
         });
+
     }
     else {
 
