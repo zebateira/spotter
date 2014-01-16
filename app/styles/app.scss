@@ -13,13 +13,14 @@ $marker-size: 20px;
 $marker-color: grey;
 
 #map {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  // display: block;
+  // margin-right: auto;
+  // margin-left: auto;
 }
 
 .ur-here {
   text-align: center;
+  margin-top: 20px;
 
   * {
     display: inline-block;
