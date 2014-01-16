@@ -29,7 +29,8 @@
     "grunt-webp": "~0.0.1",
     "grunt-modernizr": "~0.3.0",
     "grunt-autoshot": "~0.0.2",
-    "grunt-responsive-images": "~0.0.3"
+    "grunt-responsive-images": "~0.0.3",
+    "grunt-gh-pages": "~0.9.0"
   },
   "engines": {
     "node": ">=0.8.0"

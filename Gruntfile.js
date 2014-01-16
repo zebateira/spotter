@@ -406,6 +406,12 @@ module.exports = function (grunt) {
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
             }
+        },
+        'gh-pages': {
+            options: {
+                base: 'dist'
+            },
+            src: '**/*'
         }
     });
 
@@ -441,11 +447,12 @@ module.exports = function (grunt) {
         'uglify',
         'copy',
         'rev',
-        'usemin'
+        'usemin',
+        'gh-pages'
     ]);
 
     grunt.registerTask('default', [
-        'jshint',
+        // 'jshint',
         'test',
         'build'
     ]);

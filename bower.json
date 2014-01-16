@@ -2,9 +2,9 @@
   "name": "app",
   "version": "0.0.1",
   "dependencies": {
-    "requirejs": ">=2.1.4",
-    "modernizr": ">=2.6.2",
-    "jquery": ">=2.0.3",
+    "requirejs": "*",
+    "modernizr": "*",
+    "jquery": "*",
     "svg.js": "*",
     "foundation": "*",
     "normalize-css": "*",
