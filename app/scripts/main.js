@@ -16,16 +16,20 @@ require(['app', 'jquery', 'svgjs', 'foundation-amd'], function (app, $, SVG) {
     // use app here
     console.log(app);
 
-    var imgName = (window.location.search ? window.location.search.replace('?', '') : 'feup') + '.png';
+    var imgName = (window.location.search ? window.location.search.replace('?', '') : 'feup') + '.svg';
 
     if(SVG.supported) {
 
-        var draw = SVG('map').size('100%', '100%');
-        var rect = draw.image('images/' + imgName, '100%', $(document).height() - $('.tab-bar').height() - 40);
+        // var rect = draw.image('images/' + imgName, '100%', $(document).height() - $('.tab-bar').height() - 40);
+        $('#map').load('images/' + imgName, function() {
 
-        $(window).on('resize', function() {
-            rect.size('100%', $(document).height() - $('.tab-bar').height() - 40);
+            $('#b005', this).hover(function() {
+                $(this).css('opacity', 1);
+            }, function() {
+                $(this).css('opacity', 0.5);
+            });
         });
+
 
     }
     else {
