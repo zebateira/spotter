@@ -23,7 +23,7 @@ require(['app', 'jquery', 'svgjs', 'foundation-amd'], function (app, $, SVG) {
         // var rect = draw.image('images/' + imgName, '100%', $(document).height() - $('.tab-bar').height() - 40);
         $('#map').load('images/' + imgName, function() {
 
-            $('#b005', this).hover(function() {
+            $('[id*="b"]', this).hover(function() {
                 $(this).css('opacity', 1);
             }, function() {
                 $(this).css('opacity', 0.5);
