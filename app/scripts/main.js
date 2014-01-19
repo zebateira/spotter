@@ -13,10 +13,13 @@ require.config({
 
 require(['app', 'jquery', 'svgjs', 'foundation-amd'], function (app, $, SVG) {
     'use strict';
-    // use app here
     console.log(app);
 
-    var imgName = (window.location.search ? window.location.search.replace('?', '') : 'feup') + '.svg';
+    var fileType = (SVG.supported ? '.svg' : '.png');
+
+    var imgName = (window.location.search ?
+                    window.location.search.replace('?', '') : 'map') 
+                + fileType;
 
     if(SVG.supported) {
 
@@ -24,15 +27,16 @@ require(['app', 'jquery', 'svgjs', 'foundation-amd'], function (app, $, SVG) {
         $('#map').load('images/' + imgName, function() {
 
             $('[id*="b"]', this).hover(function() {
-                $(this).css('opacity', 1);
-            }, function() {
                 $(this).css('opacity', 0.5);
+            }, function() {
+                $(this).css('opacity', 1);
             });
         });
 
 
     }
     else {
+        $('#map').load('images/' + imgName);
 
         $('#map').error(function() {
             var troll = [
