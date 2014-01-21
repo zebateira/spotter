@@ -54,17 +54,17 @@
 \pagestyle{fancy}                % pages have headers and footers
 \fancyhead{}                     % Blank out the default header
 \fancyfoot{}                     % Blank out the default footer
-\fancyhead[LO,RE]{Exemplo de artigo em \LaTeX} % Custom header text
-\fancyhead[RO,LE]{\thepage}      % Custom header text
-\fancyfoot[RO,LE]{Grupo xx, \today} % Custom footer text
+% \fancyhead[LO,RE]{Exemplo de artigo em \LaTeX} % Custom header text
+% \fancyhead[RO,LE]{\thepage}      % Custom header text
+% \fancyfoot[RO,LE]{Grupo xx, \today} % Custom footer text
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
 %\hyphenation{}                  % explicit hyphenation
 
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------
 %	macro definitions
-%----------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------
 
 % entities
 \newcommand{\class}[1]{{\normalfont\slshape #1\/}}
@@ -77,7 +77,7 @@
 %----------------------------------------------------------------------------------------
 
 \title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{
-  Spotter: Localização interior com \emph{QRCodes}
+  Spotter: Localização interior com \emph{QRCodes} usando dispositivos móveis
 }} % Article title
 
 \author{José Bateira\\
@@ -142,130 +142,41 @@ Os resultados desta solução apontam para uma satisfação na rapidez com que s
 % subsection objectivos (end)
 
 
-%------------------------------------------------
-
-\section{\svg}\label{sec:sota}
-
-Nos últimos tempos têm surgido diversas soluções, apresentadas por
-empresas do sector Automação de Sistemas para a disponibilização de
-sistemas \scadadms{} na \textit{Web}.
-
-\emph{Scalable Vector Graphics} é uma linguagem em formato XML que
-descreve gráficos de duas dimensões. 
-Este formato padronizado pela W3C (\emph{World Wide Web Consortium})
-é livre de patentes ou direitos de autor e está totalmente
-documentado, à semelhança de outros W3C standards~\cite{kn:svgdoc}.
-
-Sendo uma linguagem XML, o \svg{} herda uma série de vantagens: a
-possibilidade de transformar \svg{} usando técnicas como XSLT, de embeber
-\svg{} em qualquer documento XML usando \textit{namespaces} ou até de 
-estilizar \svg{} recorrendo a CSS (\emph{Cascade Style Sheets}). 
-De uma forma geral, pode dizer-se que \svg{}s interagem bem com as
-atuais tecnologias ligadas ao XML e à Web, tal como referido
-em~\cite{kn:svgibm,kn:svgw3c}.
-
-\subsection{Batik \svg{} Toolkit} \label{batik} 
-
-Batik é um conjunto de bibliotecas baseadas em \textit{Java} que
-permitem o uso de imagens \svg{} (visualização, geração ou
-manipulação) em aplicações ou \textit{applets} \cite{kn:batikarchitecture}.  
-O projeto Batik destina-se a fornecer ao programador alguns módulos
-que permitem desenvolver soluções especificas usando \svg. 
+\section{State of the Art} % (fold)
+\label{sec:state_of_the_art}
 
 \lipsum[3]
 
-%------------------------------------------------
 
-\section{Visualizador de Sinópticos}\label{sec:application}
+\subsection{Projeto 1} % (fold)
+\label{sub:projeto_1}
+\lipsum[2]
+% subsection projeto_1 (end)
 
-A arquitetura do visualizador assenta sobre os seguintes conceitos base \cite{kn:zpmd}:
-\begin{compactitem}
-\item \textbf{Componentes} --- Suspendisse auctor mattis augue \emph{push};
-\item \textbf{Praesent} --- Sit amet sem maecenas eleifend facilisis leo;
-\item \textbf{Pellentesque} --- Habitant morbi tristique senectus et netus.
-\end{compactitem}
 
-\lipsum[4]
+\subsection{Projeto 2} % (fold)
+\label{sub:projeto_2}
 
-Apresenta-se de seguida um exemplo de equação, completamente fora do contexto:
-\begin{eqnarray}
-CIF_1: \hspace*{5mm}F_0^j(a) &=& \frac{1}{2\pi \iota} \oint_{\gamma} \frac{F_0^j(z)}{z - a} dz\\
-CIF_2: \hspace*{5mm}F_1^j(a) &=& \frac{1}{2\pi \iota} \oint_{\gamma} \frac{F_0^j(x)}{x - a} dx \label{eq:cif}
-\end{eqnarray}
+% subsection projeto_2 (end)
 
-Na Equação~\ref{eq:cif} \lipsum[5]
-
-\subsection{Exemplo de Figura}
-
-É apresentado na Figura~\ref{fig:arch} %da página~\pageref{fig:arch}
-um exemplo de figura flutuante que ficará onde o \LaTeX\ entender.
-
-\begin{figure}
-  \begin{center}
-    \leavevmode
-    \includegraphics[width=0.45\textwidth]{puzzle}
-    \caption{Arquitetura da Solução Proposta}
-    \label{fig:arch}
-  \end{center}
-\end{figure}
-
-\lipsum[6]
-
-\subsection{Exemplo de Tabela}
-
-É apresentado na Tabela~\ref{tab:exemplo1} um exemplo de tabela.
-
-\begin{table}[H]
-  \centering
-  \caption{Uma Tabela Simples}
-  \begin{tabular}{| l | p{45mm} |}
-    \hline
-    \textbf{Acrónimo} & \textbf{Significado}\\
-    \hline
-    \hline
-    ADT   & \emph{Abstract Data Type}\\\hline
-    ANDF  & \emph{Architecture-Neutral Distribution Format}\\\hline
-    API   & \emph{Application Programming Interface}\\
-    \hline
-  \end{tabular}
-  \label{tab:exemplo1}
-\end{table}
+% section state_of_the_art (end)
 
 \lipsum[7]
 
-% \begin{table}
-%   \centering
-%   \caption{Tabela Exemplo}
-% \begin{tabular}{|c|r@{.}lr@{.}lr@{.}l||r|}
-% 	\hline
-% \multicolumn{8}{|c|}
-% 	{\rule[-3mm]{0mm}{8mm}Iteração $k$ de $f(x_n)$} \\
-% \textbf{\em k}
-% 	& \multicolumn{2}{c}{$x_1^k$}
-% 	& \multicolumn{2}{c}{$x_2^k$}
-% 	& \multicolumn{2}{c||}{$x_3^k$}
-% 	& comentários \\ \hline \hline
-% 0   & -0&3                 & 0&6                 &  0&7   & - \\
-% 1   &  0&47102965 & 0&04883157 & -0&53345964  & $\delta<\epsilon$ \\
-% 2   &  0&49988691 & 0&00228830 & -0&52246185  & $\delta < \varepsilon$ \\
-% 3   &  0&49999976 & 0&00005380 & -0&523656   &   $N$ \\
-% 4   &  0&5                 & 0&00000307 & -0&52359743  & \\
-% \vdots	& \multicolumn{2}{c}{\vdots}
-% 	& \multicolumn{2}{c}{$\ddots$}
-% 	& \multicolumn{2}{c||}{\vdots}  & \\
-% 7   &  0&5   & 0&0    & \textbf{-0}&\textbf{52359878}
-% 		 & $\delta<10^{-8}$ \\ \hline
-% \end{tabular}
-%   \label{tab:exemplo2}
-% \end{table}
+\section{Solução Proposta} % (fold)
+\label{sec:solucao}
 
-%------------------------------------------------
+\lipsum[8]
+
+\subsection{Resultados} % (fold)
+\label{sub:resultados}
+\lipsum[3]
+% subsection resultados (end)
+
+% section solucao (end)
+
 
 \section{Conclusões}\label{sec:conclusions}
-
-Neste artigo abordou-se o desenvolvimento de um protótipo, com vista a
-estudar a adequadibilidade da tecnologia \svg{} à visualização de
-sinópticos na \textit{Web}.
 
 \lipsum[8]
 
