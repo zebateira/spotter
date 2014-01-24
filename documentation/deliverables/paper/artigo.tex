@@ -86,7 +86,6 @@
 Rui Rodrigues\\
 \small \texttt{rui.rodrigues@fe.up.pt} \\
 \small Faculdade de Engenharia da Universidade de Porto
-\vspace{-5mm}
 }
 
 \date{\today}
@@ -120,35 +119,21 @@ A solução proposta foca-se em dar informação da localização atual \emph{on
 
 \section{Introdução}\label{sec:intro}
 
-  Desde que os dispositivos móveis passaram a suportar conexões \emph{wireless}, muitas soluções para localização interior surgiram.
-  Usando wifi, bluetooth e até RFID, a falta de precisão da posição e o consumo de bateria excessivo são alguns dos problemas que não tornam estas soluções viáveis.
+  Desde que os dispositivos móveis passaram a suportar conexões \emph{wireless}, muitas soluções para localização interior surgiram \cite{Liu2007} \cite{Koyuncu2010}.
+  Usando \emph{wifi}, \emph{bluetooth} e até \emph{RFID}, a falta de precisão da posição e o consumo de bateria excessivo são alguns dos problemas que não tornam estas soluções viáveis.
   No entanto, estas têm em foco um ponto bastante importante: localização em tempo real.
 
   A solução proposta aborda o problema com outro paradigma: localização por pedido (\emph{on-demand, non-real time}).
-  Aquando da leitura de um QRCode devidamente afixado num ponto de um edifício, o utilizador é redirecionado para um website (adaptado para visualização \emph{mobile}) que mostra a parte da planta do mapa do edifício onde o utilizador se encontra.
-  Um apontador deve indicar a posição do utilizador no mapa.
+  Aquando da leitura de um \emph{QRCode} \cite{Wkhlu2008} devidamente afixado num ponto de um edifício, o utilizador é redirecionado para um website (adaptado para visualização \emph{mobile}) que mostra a parte da planta do mapa do edifício onde o utilizador se encontra.
+  Deve aparecer um apontador a indicar a posição do utilizador no mapa.
+  \\
+  Esta ideia não é nova e é possível ver uma implementação em \cite{Costa2011}. É usado o Google Maps como recurso para visualizar os mapas pré-criados. São usadas várias camadas (\emph{layers}) no mapa para representar os vários andares de um edifício.
 
+  A solução proposta usa mapas criados em \emph{SVG}.
+  Desta forma é possível usar o sistema de coordenadas existente dentro do \emph{SVG} para facilitar o mapeamento entre a posição do utilizador e outros pontos de interesse do mapa.
+  Outra vantagem é a boa integração que o \emph{SVG} tem em tecnologias web (\emph{HTML, CSS e Javascript}), que permite manipular livremente o conteúdo do mapa \emph{SVG} do lado do cliente (\emph{client-side}).
 
-  % section introducao (end)
-
-\section{Estado da Arte} % (fold)
-\label{sec:state_of_the_art}
-
-\lipsum[3]
-
-\subsection{Projeto 1} % (fold)
-\label{sub:projeto_1}
-\lipsum[2]
-% subsection projeto_1 (end)
-
-
-\subsection{Projeto 2} % (fold)
-\label{sub:projeto_2}
-\lipsum[7]
-
-% subsection projeto_2 (end)
-
-% section state_of_the_art (end)
+% section introducao (end)
 
 
 \section{Solução Proposta} % (fold)
