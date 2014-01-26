@@ -159,7 +159,7 @@ Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado par
   onde \verb+b_ii_0_3+ é um identificador de um mapa de um edifício.
 
   De seguida, o utilizador abre o \emph{website} com o \emph{browser} do seu dispositivo.
-  Como o identificar do mapa foi enviado juntamente com o \emph{URL}, será renderizado o mapa correspondente àquele identificador. 
+  Como o identificador do mapa foi enviado juntamente com o \emph{URL}, será renderizado o mapa correspondente àquele identificador. 
   A imagem \ref{fig:arch} ilustra esta mesma situação.
 
   \begin{figure}[width=\textwidth]
@@ -189,7 +189,7 @@ Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado par
   O mapa \ref{fig:map} foi baseado nas plantas dos edifícios que se encontram públicas no site da \href{http://sigarra.up.pt/feup/pt/instal_geral.edificio_view?pv_id=1407}{FEUP}.
 
   Até ao momento de escrita deste artigo, apenas esta parte do mapa \ref{fig:map} do Bloco B se encontra mapeada em \svg.
-  No entanto, é possível ver as outras partes do mapa do edifício do bloco B, no formato de imagem.
+  No entanto, é possível ver as outras partes do mapa do edifício do bloco B (aquando da leitura do \qrcode), no formato de imagem.
 
   Cada mapa deste tamanho terá à volta de 3 \qrcodes{} distribuídos pelo edifício.
 
@@ -208,9 +208,12 @@ Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado par
 % section trabalho_futuro (end)
 
 
-\section{Conclusões}\label{sec:conclusions}
+\section{Conclusões} % (fold)
+\label{sec:conclusoes}
+  A solução proposta é funcional e resulta. Pode falhar por não fornecer localização em tempo real, mas ganha por fornecer a posição dada com máxima precisão.
+  O facto da aplicação ser \emph{web} permite que qualquer dispositivo móvel (independentemente do sistema operativo) usar a mesma.
+% section conclusoes (end)
 
-\lipsum[8]
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
