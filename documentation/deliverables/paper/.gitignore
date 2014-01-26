@@ -1,5 +1,6 @@
 ## bibliography
 bib/*.pdf
+*.pdf_tex
 
 ## diff files
 diff.tex

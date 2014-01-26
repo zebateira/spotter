@@ -9,6 +9,8 @@
 \usepackage[utf8]{inputenc}
 %\usepackage[latin1]{inputenc}
 
+\usepackage{verbatim}
+
 \usepackage[T1]{fontenc}        % T1 fonts
 \usepackage{lmodern}            % fonts
 \usepackage[sc]{mathpazo}       % Use the Palatino font
@@ -68,8 +70,9 @@
 
 % entities
 \newcommand{\class}[1]{{\normalfont\slshape #1\/}}
-\newcommand{\svg}{\class{SVG}}
-\newcommand{\scadadms}{\class{SCADA/DMS}}
+\newcommand{\svg}{\emph{SVG}}
+\newcommand{\qrcode}{\emph{QRCode}}
+
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -108,7 +111,8 @@ Localização interior de edifícios e infraestruturas com smartphones/tablets �
 % É de notar que a quantidade de recursos do dispositivo móvel que estão a ser usados são bastantes, o que pode fazer com que se gaste muita bateria.
 % O GPS não é uma solução viável pois não funciona em ambientes cobertos.
 
-A solução proposta foca-se em dar informação da localização atual \emph{on-demand} e não em \emph{real-time}, sem necessitar de tecnologias \emph{wireless}. Quando um utilizador lê um \emph{QRCode} afixado num edifício é redirecionado para um website (adaptado para mobile) que mostra o mapa do edifício com um marker que indica a posição do utilizador.
+A solução proposta foca-se em dar informação da localização atual \emph{on-demand} e não em \emph{real-time}, sem necessitar de tecnologias \emph{wireless}.
+Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado para um website (adaptado para mobile) que mostra o mapa do edifício com um marker que indica a posição do utilizador.
 
 % Os resultados desta solução apontam para uma satisfação na rapidez com que se consegue saber a posição, pois tudo fica dependente da velocidade de conexão do dispositivo do utilizador à internet.
 \end{abstract}
@@ -124,27 +128,60 @@ A solução proposta foca-se em dar informação da localização atual \emph{on
   No entanto, estas têm em foco um ponto bastante importante: localização em tempo real.
 
   A solução proposta aborda o problema com outro paradigma: localização por pedido (\emph{on-demand, non-real time}).
-  Aquando da leitura de um \emph{QRCode} \cite{Wkhlu2008} devidamente afixado num ponto de um edifício, o utilizador é redirecionado para um website (adaptado para visualização \emph{mobile}) que mostra a parte da planta do mapa do edifício onde o utilizador se encontra.
+  Aquando da leitura de um \qrcode{} \cite{Wkhlu2008} devidamente afixado num ponto de um edifício, o utilizador é redirecionado para um website (adaptado para visualização \emph{mobile}) que mostra a parte da planta do mapa do edifício onde o utilizador se encontra.
   Deve aparecer um apontador a indicar a posição do utilizador no mapa.
   \\
-  Esta ideia não é nova e é possível ver uma implementação em \cite{Costa2011}. É usado o Google Maps como recurso para visualizar os mapas pré-criados. São usadas várias camadas (\emph{layers}) no mapa para representar os vários andares de um edifício.
+  Esta ideia não é nova e é possível ver uma implementação em \cite{Costa2011}.
+  É usado o Google Maps como recurso para visualizar os mapas pré-criados.
+  São usadas várias camadas (\emph{layers}) no mapa para representar os vários andares de um edifício.
+  \\
 
-  A solução proposta usa mapas criados em \emph{SVG}.
-  Desta forma é possível usar o sistema de coordenadas existente dentro do \emph{SVG} para facilitar o mapeamento entre a posição do utilizador e outros pontos de interesse do mapa.
-  Outra vantagem é a boa integração que o \emph{SVG} tem em tecnologias web (\emph{HTML, CSS e Javascript}), que permite manipular livremente o conteúdo do mapa \emph{SVG} do lado do cliente (\emph{client-side}).
+  A solução proposta usa mapas criados em \svg.
+  Desta forma é possível usar o sistema de coordenadas existente dentro do \svg{} para facilitar o mapeamento entre a posição do utilizador e outros pontos de interesse do mapa.
+  Outra vantagem é a boa integração que o \svg{} tem em tecnologias web (\emph{HTML, CSS e Javascript}), que permite manipular livremente o conteúdo do mapa \svg{} do lado do cliente (\emph{client-side}), tornando a experiência do utilizador com o mapa muito mais dinâmica.
 
 % section introducao (end)
 
 
-\section{Solução Proposta} % (fold)
+\section{Spotter} % (fold)
 \label{sec:solucao}
 
-\lipsum[8]
+  A solução apresentada permite ao utilizador utilizar o seu dispositivo móvel (\emph{smartphone/tablet}) para ler um \qrcode{} que contém um \emph{URL} que aponta para o website onde está alojado o mapa a que o código pertence.
+  Um exemplo de \emph{URL} usado no protótipo implementado é:
 
-\subsection{Resultados} % (fold)
-\label{sub:resultados}
-\lipsum[3]
-% subsection resultados (end)
+  \begin{verbatim}
+  http://carsy.github.io/spotter?b_ii_0_3\end{verbatim}
+  onde \verb+b_ii_0_3+ é um identificador de um mapa de um edifício.
+
+  De seguida, o utilizador abre o \emph{website} com o \emph{browser} do seu dispositivo.
+  Como o identificar do mapa foi enviado juntamente com o \emph{URL}, será renderizado o mapa correspondente àquele identificador. 
+  A imagem \ref{fig:arch} ilustra esta mesma situação.
+
+  \begin{figure}[width=\textwidth]
+    \begin{center}
+      \includegraphics{arch.pdf}
+    \end{center}
+    \caption{Arquitetura simples do Spotter}
+    \label{fig:arch}
+  \end{figure}
+
+  Entrando mais em detalhe no formato do identificador de cada mapa, a primeira letra indica em que bloco de edifício nos encontramos (bloco B).
+  Depois temos outro sub-identificador que indica a parte do bloco do mapa (parte 2 = ii), seguido do número do piso (0 neste caso), e depois temos o identificador da posição do \qrcode{} referente a esta parte do mapa.
+  O essencial é que o identificador seja único.
+  Desta forma podemos garantir que não via haver conflitos no pedido de mapa.
+  O mapa pedido é o mostrado na imagem \ref{fig:map}.
+  O apontador laranja indica a posição do utilizador, ou seja, do \qrcode.
+
+  \begin{figure}[width=\textwidth]
+    \begin{center}
+      \includegraphics{map.pdf}
+    \end{center}
+    \caption{Parte do mapa do bloco B}
+    \label{fig:map}
+  \end{figure}
+
+
+
 
 % section solucao (end)
 
