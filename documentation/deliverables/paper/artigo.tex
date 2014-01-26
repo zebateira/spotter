@@ -9,7 +9,10 @@
 \usepackage[utf8]{inputenc}
 %\usepackage[latin1]{inputenc}
 
+% for code and stuff
 \usepackage{verbatim}
+% for verbatim inside captions o0
+\usepackage{cprotect}
 
 \usepackage[T1]{fontenc}        % T1 fonts
 \usepackage{lmodern}            % fonts
@@ -72,6 +75,7 @@
 \newcommand{\class}[1]{{\normalfont\slshape #1\/}}
 \newcommand{\svg}{\emph{SVG}}
 \newcommand{\qrcode}{\emph{QRCode}}
+\newcommand{\qrcodes}{\emph{QRCodes}}
 
 
 %----------------------------------------------------------------------------------------
@@ -147,6 +151,7 @@ Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado par
 \label{sec:solucao}
 
   A solução apresentada permite ao utilizador utilizar o seu dispositivo móvel (\emph{smartphone/tablet}) para ler um \qrcode{} que contém um \emph{URL} que aponta para o website onde está alojado o mapa a que o código pertence.
+  O edifício usado em testes foi o Edifício do Bloco B de aulas da Faculdade de Engenharia da Universidade do Porto.
   Um exemplo de \emph{URL} usado no protótipo implementado é:
 
   \begin{verbatim}
@@ -161,29 +166,46 @@ Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado par
     \begin{center}
       \includegraphics{arch.pdf}
     \end{center}
-    \caption{Arquitetura simples do Spotter}
+    \caption{Arquitetura simples do Spotter: 1º Ler \qrcode; 2º Pedido do Mapa; 3º Resposta com o Mapa}
     \label{fig:arch}
   \end{figure}
 
   Entrando mais em detalhe no formato do identificador de cada mapa, a primeira letra indica em que bloco de edifício nos encontramos (bloco B).
   Depois temos outro sub-identificador que indica a parte do bloco do mapa (parte 2 = ii), seguido do número do piso (0 neste caso), e depois temos o identificador da posição do \qrcode{} referente a esta parte do mapa.
   O essencial é que o identificador seja único.
-  Desta forma podemos garantir que não via haver conflitos no pedido de mapa.
+  Desta forma podemos garantir que não vai haver conflitos no pedido do mapa.
   O mapa pedido é o mostrado na imagem \ref{fig:map}.
-  O apontador laranja indica a posição do utilizador, ou seja, do \qrcode.
 
   \begin{figure}[width=\textwidth]
     \begin{center}
       \includegraphics{map.pdf}
     \end{center}
-    \caption{Parte do mapa do bloco B}
+    \cprotect\caption{Parte do mapa do bloco B com id: \verb+b_ii_0_3+}
     \label{fig:map}
   \end{figure}
 
+  O apontador laranja indica a posição do utilizador, ou seja, do \qrcode.
+  É possível também ver outros indicadores como a localização de lanços de escadas, elevadores e casas de banho.
+  O mapa \ref{fig:map} foi baseado nas plantas dos edifícios que se encontram públicas no site da \href{http://sigarra.up.pt/feup/pt/instal_geral.edificio_view?pv_id=1407}{FEUP}.
 
+  Até ao momento de escrita deste artigo, apenas esta parte do mapa \ref{fig:map} do Bloco B se encontra mapeada em \svg.
+  No entanto, é possível ver as outras partes do mapa do edifício do bloco B, no formato de imagem.
 
+  Cada mapa deste tamanho terá à volta de 3 \qrcodes{} distribuídos pelo edifício.
 
 % section solucao (end)
+
+\section{Trabalho Futuro} % (fold)
+\label{sec:trabalho_futuro}
+  Futuramente seria feito o mapeamento do resto do edifício B e dos restantes edifícios do campus da faculdade.
+  Assim como acrescentar mais pontos de referência como máquinas de venda automática, impressoras e diferenciar salas de aulas normais de salas de aulas que têm computadores.
+
+  No entanto a principal funcionalidade a implementar seria indicar o caminho mais curto para outro ponto que o utilizador selecionasse no mapa.
+  Iria ser necessário dar a possibilidade ao utilizador de fazer \emph{zoom-in} e \emph{zoom-out} no mapa.
+
+  Outras funcionalidades interessantes: adicionar informações sobre eventos que irão ocorrer em pontos específicos, como por exemplo, palestras no Auditório FEUP; partilhar com amigos a posição atual do utilizador.
+
+% section trabalho_futuro (end)
 
 
 \section{Conclusões}\label{sec:conclusions}
@@ -196,11 +218,7 @@ Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado par
 
 %% auto bibliographic list 
 \renewcommand{\bibname}{Referências}
-% uses bibtex file
-%\bibliographystyle{alpha-pt}
-%\bibliographystyle{alpha}
 \bibliographystyle{unsrt-pt}
-%\bibliographystyle{unsrt}
 \bibliography{bib/myrefs}
 
 %----------------------------------------------------------------------------------------
