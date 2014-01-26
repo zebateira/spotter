@@ -3,8 +3,6 @@
 \usepackage[portuguese]{babel}  % portuguese
 \usepackage{graphicx}           % images: .png or .pdf w/ pdflatex; .eps w/ latex
 
-\usepackage{lipsum}             % generate dummy text throughout this template
-
 \usepackage[utf8]{inputenc}
 
 % for code and stuff
@@ -15,10 +13,9 @@
 \usepackage{url}                % urls
 \usepackage{booktabs}           % Horizontal rules in tables
 \usepackage{float}              % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
-\usepackage{paralist}           % Used for the compactitem environment which makes bullet points with less space between them
 
 % geometry package
-\usepackage[outer=20mm,inner=20mm,vmargin=15mm,includehead,includefoot,headheight=15pt]{geometry}
+\usepackage[outer=20mm,inner=20mm,vmargin=15mm]{geometry}
 %% space between columns
 \columnsep 10mm
 
@@ -42,17 +39,6 @@
 
 \usepackage{indentfirst}         % indent also 1st paragraph
 
-\usepackage{fancyhdr}            % Headers and footers
-\pagestyle{fancy}                % pages have headers and footers
-\fancyhead{}                     % Blank out the default header
-\fancyfoot{}                     % Blank out the default footer
-% \fancyhead[LO,RE]{Exemplo de artigo em \LaTeX} % Custom header text
-% \fancyhead[RO,LE]{\thepage}      % Custom header text
-% \fancyfoot[RO,LE]{Grupo xx, \today} % Custom footer text
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-
-%\hyphenation{}                  % explicit hyphenation
 
 %---------------------------------------------------------------------------------------
 %	macro definitions
@@ -69,7 +55,7 @@
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{
+\title{\vspace{-15mm}\fontsize{24.88pt}{10pt}\textbf{
   Spotter: Localização interior com \emph{QRCodes} usando dispositivos móveis
 }}
 
@@ -95,16 +81,16 @@ Rui Rodrigues\\
 %----------------------------------------------------------------------------------------
 
 \begin{abstract}
-Localização interior de edifícios e infraestruturas com smartphones/tablets é um tema bastante falado que permite com algum tipo de tecnologia (\emph{wifi}, \emph{bluetooth}) localizar um utilizador no mapa do edifício onde se encontra.
-% As suas aplicações são diversas, como por exemplo, visitas guiadas a museus, mapas de aeroportos, hospitais e centros comerciais.
-% A maioria das soluções usam wifi, bluetooh, RFID cards, Bússola, giroscópio e acelerómetro. [?]
-% É de notar que a quantidade de recursos do dispositivo móvel que estão a ser usados são bastantes, o que pode fazer com que se gaste muita bateria.
-% O GPS não é uma solução viável pois não funciona em ambientes cobertos.
+    Localização interior de edifícios e infraestruturas com smartphones/tablets é um tema bastante falado que permite com algum tipo de tecnologia (\emph{wifi}, \emph{bluetooth}) localizar um utilizador no mapa do edifício onde se encontra.
+  % As suas aplicações são diversas, como por exemplo, visitas guiadas a museus, mapas de aeroportos, hospitais e centros comerciais.
+  % A maioria das soluções usam wifi, bluetooh, RFID cards, Bússola, giroscópio e acelerómetro. [?]
+  % É de notar que a quantidade de recursos do dispositivo móvel que estão a ser usados são bastantes, o que pode fazer com que se gaste muita bateria.
+  % O GPS não é uma solução viável pois não funciona em ambientes cobertos.
 
-A solução proposta foca-se em dar informação da localização atual \emph{on-demand} e não em \emph{real-time}, sem necessitar de tecnologias \emph{wireless}.
-Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado para um website (adaptado para mobile) que mostra o mapa do edifício com um marker que indica a posição do utilizador.
+  A solução proposta foca-se em dar informação da localização atual \emph{on-demand} e não em \emph{real-time}, sem necessitar de tecnologias \emph{wireless}.
+  Quando um utilizador lê um \qrcode{} afixado num edifício é redirecionado para um website (adaptado para mobile) que mostra o mapa do edifício com um marker que indica a posição do utilizador.
 
-% Os resultados desta solução apontam para uma satisfação na rapidez com que se consegue saber a posição, pois tudo fica dependente da velocidade de conexão do dispositivo do utilizador à internet.
+  % Os resultados desta solução apontam para uma satisfação na rapidez com que se consegue saber a posição, pois tudo fica dependente da velocidade de conexão do dispositivo do utilizador à internet.
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
