@@ -8,6 +8,11 @@ html, body {
   height: 100%;
 }
 
+.main-section {
+  height: 100%;
+  overflow: auto;
+}
+
 $marker-size: 20px;
 $marker-color: grey;
 
@@ -17,24 +22,6 @@ $marker-color: grey;
   margin-left: auto;
 }
 
-.ur-here {
-  text-align: center;
-
-  * {
-    display: inline-block;
-  }
-
-  .text {
-    vertical-align: top;
-    line-height: $marker-size;
-    font-size: 1.6em;
-  }
-
-  .marker {
-    height: $marker-size;
-    width: $marker-size;
-    background-color: $marker-color;
-    border-radius: 1000px;
-  }
+.panel {
+  overflow: auto;
 }
-
