@@ -1,6 +1,8 @@
 /*global define */
 define(['jquery', 'svgjs'], function ($, SVG) {
   'use strict';
+
+  // SVG.supported = false;
   var fileType = (SVG.supported ? '.svg' : '.png');
 
   var imgName = (window.location.search ?
