@@ -1,4 +1,6 @@
 @import "foundation";
+@import "../bower_components/foundation/scss/general_foundicons";
+@import "../bower_components/foundation/scss/foundation-icons";
 
 html, body {
   height: 100%;
@@ -8,15 +10,8 @@ html, body {
   height: 100%;
 }
 
-.main-section {
-  height: 100%;
-  overflow: auto;
-}
-
-$marker-size: 20px;
-$marker-color: grey;
-
 #map {
+  width: 100%;
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -25,3 +20,4 @@ $marker-color: grey;
 .panel {
   overflow: auto;
 }
+

@@ -37,7 +37,7 @@
         </section>
 <!--
         <section class="right-small">
-          <a class="right-off-canvas-toggle menu-icon/ ><span></span></a>
+          <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
         </section>
       -->
       </nav>
@@ -45,9 +45,29 @@
       <aside class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Spotter</label></li>
-          <li><a class="menu-entry">FEUP's Map</a></li>
-          <li><a class="menu-entry">Where am I</a></li>
-          <li><a class="menu-entry">History</a></li>
+          <li><a id="home" class="menu-entry">
+            <i class="fi-foundation"></i>
+            <span>FEUP's Map</span>
+          </a></li>
+          <li><a id="init_scan" class="menu-entry">
+            <i class="fi-marker"></i>
+            <span>Where am I?</span>
+          </a></li>
+          <li><a class="menu-entry">
+            <i class="fi-clock"></i>
+            <span>History</span>
+          </a></li>
+<!-- TODO: Layer Menu
+          <li><label>Layers</label></li>
+          <li><a href="">
+            <i class="fi-map"></i>
+            <span>Indoor</span>
+          </a></li>
+          <li><a href="">
+            <i class="fi-flag"></i>
+            <span>Markers</span>
+          </a></li> -->
+
           <li><label>About</label></li>
           <li><a class="menu-entry">What is Spotter?</a></li>
           <li><a class="menu-entry">Help</a></li>
@@ -71,7 +91,11 @@
           <img id="map" src="">
         </div>
       </section>
+
+
+
       <a class="exit-off-canvas"></a>
+
     </div>
   </div>
 
