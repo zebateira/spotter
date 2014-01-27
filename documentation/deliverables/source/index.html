@@ -1,0 +1,165 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Spotter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" 
+      type="image/png" 
+      href="favicon.png" />
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/app.css">
+
+    <script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+
+  <!-- <input type="file" accept="image/*" capture="camera"> -->
+
+
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
+      <nav class="tab-bar">
+        <section class="left-small">
+          <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+
+        <section class="middle tab-bar-section">
+          <h1 class="title">Spotter</h1>
+        </section>
+<!--
+        <section class="right-small">
+          <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+        </section>
+      -->
+      </nav>
+
+      <aside class="left-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Spotter</label></li>
+          <li><a id="home" class="menu-entry">
+            <i class="fi-foundation"></i>
+            <span>FEUP's Map</span>
+          </a></li>
+          <li><a id="init_scan" class="menu-entry">
+            <i class="fi-marker"></i>
+            <span>Where am I?</span>
+          </a></li>
+          <li><a class="menu-entry">
+            <i class="fi-clock"></i>
+            <span>History</span>
+          </a></li>
+<!-- TODO: Layer Menu
+          <li><label>Layers</label></li>
+          <li><a href="">
+            <i class="fi-map"></i>
+            <span>Indoor</span>
+          </a></li>
+          <li><a href="">
+            <i class="fi-flag"></i>
+            <span>Markers</span>
+          </a></li> -->
+
+          <li><label>About</label></li>
+          <li><a class="menu-entry">What is Spotter?</a></li>
+          <li><a class="menu-entry">Help</a></li>
+          <li><a href="http://carsy.github.com">&copy; José Bateira 2014</a></li>
+        </ul>
+
+
+      </aside>
+<!--
+      <aside class="right-off-canvas-menu">
+        <ul class="off-canvas-list">
+          <li><label>Users</label></li>
+          <li><a href="#">Hari Seldon</a></li>
+          ...
+        </ul>
+      </aside>
+-->
+      <section class="main-section">
+        <div class="panel">
+          <!-- <iframe src="https://mapsengine.google.com/map/u/0/embed?mid=z1zr7ap8l7JI.kl3w-xYU2r58" height="480" width="100%"></iframe> -->
+          <img id="map" src="">
+        </div>
+      </section>
+
+
+
+      <a class="exit-off-canvas"></a>
+
+    </div>
+  </div>
+
+
+
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+
+  <script src="javascripts/jquery.js"></script>
+
+  <script src="javascripts/jquery.foundation.mediaQueryToggle.js"></script>
+
+  <script src="javascripts/jquery.foundation.forms.js"></script>
+
+  <script src="javascripts/jquery.event.move.js"></script>
+
+  <script src="javascripts/jquery.event.swipe.js"></script>
+
+  <script src="javascripts/jquery.foundation.reveal.js"></script>
+
+  <script src="javascripts/jquery.foundation.orbit.js"></script>
+
+  <script src="javascripts/jquery.foundation.navigation.js"></script>
+
+  <script src="javascripts/jquery.foundation.buttons.js"></script>
+
+  <script src="javascripts/jquery.foundation.tabs.js"></script>
+
+  <script src="javascripts/jquery.foundation.tooltips.js"></script>
+
+  <script src="javascripts/jquery.foundation.accordion.js"></script>
+
+  <script src="javascripts/jquery.placeholder.js"></script>
+
+  <script src="javascripts/jquery.foundation.alerts.js"></script>
+
+  <script src="javascripts/jquery.foundation.topbar.js"></script>
+
+  <script src="javascripts/jquery.foundation.joyride.js"></script>
+
+  <script src="javascripts/jquery.foundation.clearing.js"></script>
+
+  <script src="javascripts/jquery.foundation.magellan.js"></script>
+
+  -->
+
+  <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-45298018-4', 'carsy.github.io');
+    ga('send', 'pageview');
+
+  </script>
+
+  <!-- build:js scripts/main.js -->
+  <script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

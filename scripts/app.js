@@ -1,9 +1,9 @@
 /*global define */
-define(['jquery', 'svgjs'], function ($, SVG) {
+define(['jquery'], function ($) {
   'use strict';
 
   // SVG.supported = false;
-  var fileType = (SVG.supported ? '.svg' : '.png');
+  var fileType = (Modernizr.svg ? '.svg' : '.png');
 
   var imgName = (window.location.search ?
                   window.location.search.replace('?', '') : 'map') 
